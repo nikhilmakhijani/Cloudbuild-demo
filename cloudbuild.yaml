@@ -1,7 +1,7 @@
 steps:
 - name: hashicorp/terraform
-   dir: deployments/
-   args: ['init']
+  dir: deployments/
+  args: ['init']
 - name: hashicorp/terraform
   dir: deployments/
   args: ['plan','-out=terraform.tfplan']
