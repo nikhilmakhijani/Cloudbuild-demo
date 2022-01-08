@@ -1,15 +1,10 @@
 steps:
  - name: hashicorp/terraform
    dir: deployments/
-   args:
-    - init
+   args: ['init']
 - name: hashicorp/terraform
   dir: deployments/
-  args:
-   - plan
-   - -out=terraform.tfplan
+  args: ['plan','-out=terraform.tfplan']
 - name: hashicorp/terraform
   dir: deployments/
-  args:
-   - apply
-   - -auto-approve
+  args: ['apply','-auto-approve']
