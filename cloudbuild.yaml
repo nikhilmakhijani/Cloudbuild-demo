@@ -1,10 +1,15 @@
 steps:
  - name: hashicorp/terraform
-    dir: deployments/app1/dev
+    dir: deployments/
     args:
     - init
 - name: hashicorp/terraform
-   dir: deployments/app1/dev
+   dir: deployments/
    args:
    - plan
    - -out=terraform.tfplan
+- name: hashicorp/terraform
+  dir: deployments/
+  args:
+  - apply
+  - -auto-approve
